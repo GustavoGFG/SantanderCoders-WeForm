@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+}
+/* global */
+
+:root {
+  font-size: 62.5%;
+  --pink-color: #fd577c;
+  --blue-color: #37e5e7;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.15);
+}
+body {
+  font-size: 1.4rem;
+}
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+span {
+  color: var(--pink-color);
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 52rem;
+  padding: 4.4rem 5.7rem;
+}
+aside h1 {
+  font-size: 6.4rem;
+}
+aside img {
+  width: 30rem;
+  max-width: 100%;
+}
+main {
+  height: 52rem;
+  width: 60rem;
+  max-width: 100%;
+  border: var(--border);
+  padding: 4.4rem 5.7rem;
+  border-radius: 1.2rem;
+}
+main h2 {
+  max-width: 43rem;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+main .actions {
+  display: flex;
+  flex-direction: column;
+}
+main .actions a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.4rem;
+  height: 5.5rem;
+  background: var(--pink-color);
+}
+main .actions a:first-child {
+  margin-top: 5.4rem;
+  margin-bottom: 4.8rem;
+}
+main .actions a.blue {
+  background: var(--blue-color);
+}
+main footer p {
+  font-size: 1.6rem;
+  margin-top: 8rem;
+}
+main footer a {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+/* Nova Entidade */
+main header {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+main header i {
+  font-size: 2rem;
+  color: #fd577c;
+}
+form {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+}
+main form :is(input, select) {
+  width: 48.9rem;
+  height: 5.5rem;
+
+  background: #fff;
+  border: var(--border);
+  border-radius: 1.2rem;
+}
+main form select {
+  appearance: none;
+}
+.select-container {
+  position: relative;
+}
+.select-container::after {
+  top: calc(2.75rem - 1.25rem);
+  right: 1rem;
+  font-size: 2.5rem;
+  color: var(--blue-color);
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+}
+.points {
+  position: relative;
+}
+form button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 4.7rem;
+  right: -4rem;
+}
+form button i {
+  color: #37e5e7;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  :root {
+    font-size: 52%;
+  }
+  .content {
+    flex-direction: column-reverse;
+    padding: 5rem 0rem;
+    height: auto;
+    min-height: calc(100vh - 5rem);
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  aside {
+    height: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  :root {
+    font-size: 50%;
+  }
+  main {
+    height: auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  :root {
+    font-size: 40%;
+  }
+}
